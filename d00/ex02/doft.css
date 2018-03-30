@@ -1,0 +1,15 @@
+body {
+	background-color: rgb(80, 80, 80);
+}
+
+div {
+	border-radius: 10px 10px black;
+	background-color: rgb(144, 144, 144);
+	box-shadow: 10px 10px 20px black;
+}
+
+div.top {
+	background-color: rgb(80, 80, 80);
+	margin: 100px;
+
+}
