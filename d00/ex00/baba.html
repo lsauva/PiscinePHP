@@ -3,27 +3,56 @@
 	<HEAD>
 		<TITLE>B.A.BA</TITLE>
 		<STYLE>
-			body {background-color: pink;}
-			h1 {text-align: center;}
-			/* img {float: left;} */
-			#footer {text-align: right; font-style : italic; font-family: "Courier New", Courier, monospace;}
-			div.photo {width: 40%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px; display: inline-block}
-			.container {text-align: center; padding: 10px 20px;}
+			body {
+				background-color: pink;
+			}
+			h1 {
+				text-align: center;
+			}
+			#footer {
+				text-align: right;
+				font-style : italic;
+				font-family: "Courier New", Courier, monospace;
+			}
+			div.frog {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				align-content: center;
+			}
+			div.photo {
+				width: 40%;
+				background-color: white;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				margin: 0 25px 0 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.container {
+				text-align: center;
+			    padding: 10px 20px;
+				align-self: center;
+			}
+			a {color: black;}
 		</STYLE>
 	</HEAD>
 	<BODY>
 		<H1>Titre é à æ ā ê î ø ö ū </H1>
-		<div class="photo">
-			<IMG title="le bon coin" alt="le bon coin" SRC="https://www.insign.fr/sites/insign/files/thumbnails/image/01-push-1260x679px.png" style="width: 100%">
-			<p class="container">
-				<a href="http://www.leboncoin.fr">Le Bon Coin</a>
-			</p>
-		</div>
-		<div class="photo">
-			<IMG title="vente privée" alt="vente privée" src="http://sojarose.o.s.f.unblog.fr/files/2014/02/vente-privee-logo.jpg" style="width:100%">
-			<p class="container">
-				<a href="http://www.vente-privee.com">Vente Privée</a>
-			</p>
+		<div class="frog">
+			<div class="photo">
+				<IMG title="le bon coin" alt="le bon coin" SRC="https://www.insign.fr/sites/insign/files/thumbnails/image/01-push-1260x679px.png" style="width: 100%">
+				<p class="container">
+					<a href="http://www.leboncoin.fr">Le Bon Coin</a>
+				</p>
+			</div>
+			<div class="photo">
+				<IMG title="vente privée" alt="vente privée" src="http://sojarose.o.s.f.unblog.fr/files/2014/02/vente-privee-logo.jpg" style="width:100%">
+				<p class="container">
+					<a href="http://www.vente-privee.com">Vente Privée</a>
+				</p>
+			</div>
 		</div>
 	</BODY>
 	<FOOTER>
