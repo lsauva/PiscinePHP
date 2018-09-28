@@ -7,4 +7,4 @@ La piscine PHP va vous permettre d'accéder aux technologies de base du web.
 	PHP procédural	| Object-oriented programming
 	Serveur Web		| Network & system administration
 	SQL				| DB & Data
-	PHP Objet		|
+	PHP Objet		| 
