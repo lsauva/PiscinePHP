@@ -13,3 +13,7 @@ div.top {
 	margin: 100px;
 
 }
+
+div.wall {
+	background-image: ./resources/brick.jpg;
+}

@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-			<title></title>
-			<link rel="stylesheet" type="text/css" href="./doft.css">
+		<meta charset="UTF-8">
+		<title>Day of the 42</title>
+		<link rel="stylesheet" type="text/css" href="./doft.css">
 	</head>
 	<body>
-		<div class="top">
-			<img src="./resources/day_of_the_42.png" alt="Day of the 42">
+		<div class="box top_box">
+			<img src="./resources/day_of_the_42.png" alt="Day of the 42" title="Logo">
+			<a href="http://www.disney.com"><img src="./resources/reload.png" alt="Recommencer au début" title="Recommencer au début"/></a>
+			<a href="http://www.relaischateaux.com"><img src="./resources/close.gif" alt="Déconnecter" title="Déconnecter" /></a>
 		</div>
-		<div class="left">
-			<img src="./resources/arrow.png" alt="arrow top">
-			<img src="./resources/main.png" alt="hand">
-			<img src="./resources/oeil.png" alt="eye">
-			<img src="./resources/outil.png" alt="tools">
-			<img src="./resources/chat-icon.png" alt="bubble">
+		<div class="box left_box">
+			<img src="./resources/arrow.png" alt="Avancer" title="Avancer">
+			<img src="./resources/main.png" alt="Prendre" title="Prendre">
+			<img src="./resources/oeil.png" alt="Regader" title="Regarder">
+			<img src="./resources/outil.png" alt="Utiliser" title="Utiliser">
+			<img src="./resources/chat-icon.png" alt="Parler" title="Parler">
 		</div>
-		<div class="center">
-			<img src="./resources/cluster.jpg" alt="cluser">
+		<div class="box center_box">
+			<img src="./resources/cluster.jpg" alt="cluser" title="Clique sur un element" usemap="#cluster_map">
+			<map name="cluster_map">
+				<area shape="rect" coords="800, 300, 1000, 400" href="http://www.apple.com" alt="mac">
+				<area shape="rect" coords="320, 320, 470, 560" href="http://www.ikea.com" alt="chaise">
+			</map>
 		</div>
-		<div class="right">
+		<div class="box right_box">
 			<img src="./resources/book.png" alt="book">
 			<img src="./resources/towel.png" alt="towel">
-			<img src="./resources/brick.jpg" alt="brick">
+			<div class="wall"></div>
 		</div>
 	</body>
 	<footer>
