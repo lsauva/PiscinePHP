@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#container {
+    margin: 0 auto;
+    max-width: 2800px;
+    min-height: 1800px;
+    display: flex;
+    flex-direction: column;
+    word-wrap:break-word !important;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size:22px;
+	line-height: 32px;
+    background-image: url("./burger.jpg");
+    background-attachment: scroll;
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(16, 16, 16);
+}
+
+h3, a {
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+h3 a {
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+    font-size:60px;
+    color: white;
+	font-family: 'Monoton';
+	}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 50px 0;
+	background-color: #E64A19;
+}
+
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+	background-color: #E64A19;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:white;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover {
+	background-color: black;
+}
+
+/* pour cacher les sous-menus par defaut  */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+
+/* Afficher les sous-menus au passage de la souris */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Premier etage des sous-menu */
+nav ul ul li {
+	width:200px;
+	float:none;
+	display:list-item;
+    position: relative;
+}
+
+/* Etages suivants */
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:200px;
+}
+
+/* Changer cette partie pour changer le caractere des sous-menus a plusieurs niveaux */
+li > a:after { content:  ' ~'; }
+li > a:only-child:after { content: ''; }
