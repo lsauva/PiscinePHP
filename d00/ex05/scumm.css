@@ -74,6 +74,15 @@ div.top_box {
     margin-top: 20px;
 }
 
+.center_box {
+    width: 1044px;
+}
+
+.center_box > img {
+    width: 1024px;
+    height: 576px;
+}
+
 .button {
 	width: 70px;
 	left: 20px;
@@ -115,7 +124,8 @@ div.wall {
 }
 
 .red_shadow {
-	text-shadow: 5px 5px 5px red;
+    text-shadow: 5px 5px 5px red;
+    /* font-size: 30px; */
 }
 
 .big {
