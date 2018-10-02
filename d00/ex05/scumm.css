@@ -80,7 +80,7 @@ div.top_box {
 
 .center_box > img {
     width: 1024px;
-    height: 576px;
+    height: auto;
 }
 
 .button {
