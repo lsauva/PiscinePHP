@@ -9,11 +9,9 @@ if (isset($argv) && isset($argv[1])) {
 	foreach ($argv as $arg) {
 		list($index, $value) = explode(':', $arg);
 		if ($index == $search)
-		{
-			echo ($value);
-			break;
-		}
+			$e = $value;
 	}
+	echo ("$e\n");
 }
-echo ("\n");
+# echo ("\n");
 ?>
