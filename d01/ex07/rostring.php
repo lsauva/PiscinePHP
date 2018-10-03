@@ -1,7 +1,6 @@
 #!/usr/bin/php
 <?php
     if ($argc > 1) {
-        # $tab = trim($argv[1], ' ');
         $tab = explode(' ', $argv[1]);
         $tab = array_filter($tab);
         $tab = array_values($tab);
