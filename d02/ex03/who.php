@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?PHP
+<?php
 	date_default_timezone_set('CET');
 	$usr = get_current_user();
 	$file = file_get_contents("/var/run/utmpx");
