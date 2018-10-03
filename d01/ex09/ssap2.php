@@ -46,9 +46,10 @@ foreach ($argv as $param ) {
         }
     }
 }
-usort($tab_param, "custom_sort");
-// print_r($tab_param);
-foreach ($tab_param as $mot) {
-    echo("$mot\n");
+if ($tab_param) {
+    usort($tab_param, "custom_sort");
+    foreach ($tab_param as $mot) {
+        echo("$mot\n");
+    }
 }
 ?>
