@@ -30,9 +30,9 @@ if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] === 'OK') {
     # on ajoute le contenu serialise dans le fichier passwd
     file_put_contents('../private/passwd', serialize($account));
     echo "OK\n";
+
 }
 # si l'un des 3 champs n'est pas valide
 else
     echo "ERROR\n";
-
 ?>
