@@ -19,7 +19,7 @@ Créez une page **index.php** qui contient un formulaire permettant de créer/mo
 ## Exemple d'utilisation
 
 
-- on commence par tester qu’on reçoit bien le cookie de session au premier accès
+- #### on commence par tester qu’on reçoit bien le cookie de session au premier accès ####
 ```zsh
 $> curl -v -c cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php'
 ```
@@ -63,7 +63,7 @@ $> curl -v -c cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php'
 * Connection #0 to host e2r12p3.42.fr left intact
 ```
 
-- Ensuite on soumet le formulaire et on observe le résultat
+- #### Ensuite on soumet le formulaire et on observe le résultat ####
 
 ```zsh
 $> curl -v -b cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php?login=lolo&passwd=tata&submit=OK'
@@ -107,7 +107,7 @@ $> curl -v -b cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php?login=lolo&
 * Connection #0 to host e2r12p3.42.fr left intact
 ```
 
-- Puis on recharge la page sans passer les valeurs dans l’url pour vérifier qu’elles sont toujours présentes
+- #### Puis on recharge la page sans passer les valeurs dans l’url pour vérifier qu’elles sont toujours présentes ####
 
 ```zsh
 $> curl -v -b cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php'
@@ -151,7 +151,7 @@ $> curl -v -b cook.txt 'http://e2r12p3.42.fr:8100/d04/ex00/index.php'
 * Connection #0 to host e2r12p3.42.fr left intact
 ```
 
-- Dernière étape on enlève le cookie de la requête, et on constate que le formulaire est de nouveau vierge et que PHP nous envoie un nouveau cookie de session
+- #### Dernière étape on enlève le cookie de la requête, et on constate que le formulaire est de nouveau vierge et que PHP nous envoie un nouveau cookie de session ####
 
 ```zsh
 $> curl -v 'http://e2r12p3.42.fr:8100/d04/ex00/index.php'
