@@ -1,0 +1,81 @@
+.img_title {
+	width: 35vw;
+	height:auto;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.horizontal {
+	border: 1px solid darkgrey;
+	width: 95vw;
+	height: 7vw;
+	border-radius: 50px;
+	display: inline block;
+	background: darkgrey;
+}
+.horizontal div {
+	text-align: right;
+	margin-top: .7vw;
+	display: inline block;
+}
+#left {
+	text-align: left;
+	float: left;
+	margin-top: 2.7vw;
+	margin-left: 2vw;
+}
+.dropbtn {
+	align-content: right;
+	font-family: serif;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    align-content: left;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 12px 16px;
+    z-index: 1;
+    align-content: left;
+    border-radius: 15px;
+    width: 10vw;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: left;
+    background-color: grey;
+}
+.messages
+{
+	display: inline;
+}
+#create
+{
+	font-size: 1vw;
+	margin-right: 8vw;
+}
+#already
+{
+	font-size: 1vw;
+}
+.box
+{
+	border: 1px solid black;
+	width : 20vw;
+	height : 5vw;
+	display: inline-block;
+}
+.box div
+{
+	text-align: left;
+	margin-top: 1.8vw;
+	margin-bottom: 1.8vw;
+	margin-left: .5vw;
+	font-size: 1.4vw;
+	float: left;
+}
