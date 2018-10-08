@@ -1,0 +1,39 @@
+# ./docker-compose.yml
+
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root42
+      MYSQL_DATABASE: db_lsauvage
+      MYSQL_USER: lsauvage
+      MYSQL_PASSWORD: root42
+    ports:
+      - "9906:3306"
+  web:
+    image: php:7.2.2-apache
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ./php/:/var/www/html/
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+    - db
+    external_links:
+    - db:mysql
+    ports:
+    - "9191:80"
+    environment:
+      MYSQL_USER: lsauvage
+      MYSQL_PASSWORD: root42
+      MYSQL_ROOT_PASSWORD: root42
+      PMA_HOST: db
