@@ -64,4 +64,4 @@ $> eval $(docker-machine env default)
 
 to deploy the STACK, simply run this where the .yml file is.
 ```shell
-$> docker compose up
+$> docker compose up -d
