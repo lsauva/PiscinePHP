@@ -1,6 +1,6 @@
-INSERT INTO db_lsauvage.ft_table (login, groupe, date_de_creation)
-SELECT nom, 'other', date_de_creation
-FROM fiche_personne
-WHERE nom LIKE '%a%' AND LENGTH(nom) < 9
-ORDER BY nom ASC 
+INSERT INTO db_lsauvage.ft_table (login, group, creation_date)
+SELECT last_name, 'other', birthdate
+FROM user_card
+WHERE last_name LIKE '%a%' AND LENGTH(last_name) < 9
+ORDER BY last_name ASC
 LIMIT 10;
