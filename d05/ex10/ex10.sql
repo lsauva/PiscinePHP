@@ -1,5 +1,5 @@
 SELECT
-    title Title, summary Summary, prod_year
+    title AS Title, summary AS Summary, prod_year
 FROM
     film,
     genre

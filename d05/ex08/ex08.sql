@@ -1,5 +1,5 @@
 SELECT
-    last_name, first_name, YEAR(birthdate) birthdate
+    last_name, first_name, YEAR(birthdate) AS birthdate
 FROM
     user_card
 WHERE

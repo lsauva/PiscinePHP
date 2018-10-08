@@ -1,6 +1,6 @@
 -- ### Premiere version sans INNER JOIN
 -- SELECT
---     UPPER(last_name) NAME,
+--     UPPER(last_name) AS NAME,
 --     first_name,
 --     price
 -- FROM
@@ -16,7 +16,7 @@
 --     first_name ASC;
 
 SELECT
-    UPPER(last_name) NAME,
+    UPPER(last_name) AS NAME,
     first_name,
     subscription.price
 FROM
