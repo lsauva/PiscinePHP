@@ -3,7 +3,7 @@
 -- (24 décembre de chaque année).
 
 SELECT
-    COUNT(`date`) AS 'films'
+    COUNT(`id_film`) AS 'films'
 FROM
     `member_history`
 WHERE
