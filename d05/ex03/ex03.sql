@@ -1,5 +1,5 @@
 INSERT INTO
-    db_lsauvage.ft_table (`login`, `group`, `creation_date`)
+    `ft_table` (`login`, `group`, `creation_date`)
 SELECT
     `last_name,`
     'other',

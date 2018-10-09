@@ -1,4 +1,4 @@
-CREATE TABLE db_lsauvage.ft_table (
+CREATE TABLE `ft_table` (
     `id` INT(10) AUTO_INCREMENT NOT NULL,
     `login` VARCHAR(8) DEFAULT "toto" NOT NULL,
     `group` ENUM ('staff', 'student', 'other') NOT NULL,
