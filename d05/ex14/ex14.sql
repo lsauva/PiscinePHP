@@ -1,9 +1,9 @@
 SELECT
-    floor_number AS floor,
-    SUM(nb_seats) AS seats
+    `floor_number` AS `floor`,
+    SUM(`nb_seats`) AS `seats`
 FROM
-    cinema
+    `cinema`
 GROUP BY
-    floor_number
+    `floor_number`
 ORDER BY
-    seats DESC;
+    `seats` DESC;
