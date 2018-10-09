@@ -65,3 +65,23 @@ $> eval $(docker-machine env default)
 to deploy the STACK, simply run this where the .yml file is.
 ```shell
 $> docker compose up -d
+Starting lamp-stack_db_1 ... done
+lamp-stack_phpmyadmin_1 is up-to-date
+Starting php_web         ... done
+```
+
+Your stack in now deployed...
+- We use port-forwarding to connect to the inside of containers from our local machine.
+    - webserver: `http://localhost:8100`
+    - db: `mysql://devuser:devpass@localhost:9906/test_db`
+- Our local directory, `./php`, is mounted inside of the webserver container as `/var/www/html/`
+    - The files within in our local folder will be served when we access the website inside of the container
+
+To run commands directly in your mysql machine :
+```shell
+$> docker exec -it lamp-stack_db_1 bash
+root@4f2c29fe29c1:/# mysql -u root -p
+Enter password:
+
+mysql>
+```
