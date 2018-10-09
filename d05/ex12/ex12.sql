@@ -1,11 +1,11 @@
 SELECT
-    last_name,
-    first_name
+    `last_name`,
+    `first_name`
 FROM
-    user_card
+    `user_card`
 WHERE
-    last_name LIKE '%-%'
-OR  first_name LIKE '%-%'
+    `last_name` LIKE '%-%'
+OR  `first_name` LIKE '%-%'
 ORDER BY
-    last_name ASC,
-    first_name ASC;
+    `last_name` ASC,
+    `first_name` ASC;

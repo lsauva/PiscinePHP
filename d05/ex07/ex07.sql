@@ -1,10 +1,10 @@
 SELECT
-    title, summary
+    `title`, `summary`
 FROM
-    film
+    `film`
 WHERE
-    summary LIKE '%42%'
+    `summary` LIKE '%42%'
 OR
-    title LIKE '%42%'
+    `title` LIKE '%42%'
 ORDER BY
-    duration ASC;
+    `duration` ASC;

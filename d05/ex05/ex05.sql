@@ -1,4 +1,4 @@
 DELETE FROM
-    ft_table
+    `ft_table`
 WHERE
-    id <= 5;
+    `id` <= 5;
