@@ -53,13 +53,13 @@ class Color
 		if (self::$verbose == TRUE)
 			echo ($this.' destructed.' . "\n");
     }
-    
+
     function		        __toString()
 	{
         return('Color( red: ' . sprintf("%3s", $this->red) .', green: ' . sprintf("%3s", $this->green) . ', blue: '. sprintf("%3s", $this->blue) .' )');
 
     }
-    
+
     function		        add( Color $color )
 	{
 		return (new Color([
