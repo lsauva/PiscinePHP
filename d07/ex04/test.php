@@ -18,12 +18,12 @@ $c = new Cersei();
 $t = new Tyrion();
 $s = new Sansa();
 
-$j->sleepWith($t);
-$j->sleepWith($s);
-$j->sleepWith($c);
+$j->sleepWith($t); //Not even if I'm drunk !
+$j->sleepWith($s); //Let's do this.
+$j->sleepWith($c); //With pleasure, but only in a tower in Winterfell, then.
 
-$t->sleepWith($j);
-$t->sleepWith($s);
-$t->sleepWith($c);
+$t->sleepWith($j); //Not even if I'm drunk !
+$t->sleepWith($s); //Let's do this.
+$t->sleepWith($c); //Not even if I'm drunk !
 
 ?>
