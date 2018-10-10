@@ -39,6 +39,8 @@ Class Exemple {
 
     public function bar() {
         print( 'Method bar called' . PHP_EOL );
+        readfile('../ex00/Color.doc.txt');
+        print(PHP_EOL);
         return;
     }
 
@@ -59,5 +61,5 @@ print($instance() . PHP_EOL);
 // $instance->foo = 42;
 // print('$instance->foo: ' . $instance->foo . PHP_EOL);
 
-// $instance->bar();
+$instance->bar();
 ?>
