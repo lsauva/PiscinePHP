@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="test.js"></script> -->
+</head>
+<body>
+    <span onclick="alert('toto')"> Hello World 2 !! </span>
+    <script>
+        // alert('je suis en fin de body...pour des questions de rapidite');
+        console.log('coucou console !');
+        var test;
+        test = 42;
+        console.debug(test);
+        function my_func() {
+            var toto;
+            toto = 'bonjour je suis toto';
+            console.log(toto);
+        }
+        my_func();
+        var tab = new Array('tomate', 'salade', 'pomme de terre');
+        for (const key in tab) {
+            // if (object.hasOwnProperty(key)) {
+            //     const element = object[key];
+            // }
+            console.log(tab[key]);
+        }
+        //
+        // dans la console sur la page google.fr ...
+        var my_element = document.getElementById('lga');
+        my_element.getAttribute('id');
+        // "lga"
+        var new_element = document.createElement('span');
+        new_element.setAttribute('style', 'background: red;');
+        var_text = document.createTextNode('hello world');
+        // new_element.appendChild(var_text);
+        my_element.appendChild(new_element);
+        my_element.removeChild(new_element);
+    </script>
+</body>
+</html>
