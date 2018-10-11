@@ -2,17 +2,18 @@
 
 class Color
 {
-    public static   $verbose = FALSE;
+    public static   $verbose = False;
 
     public          $red = 0;
     public          $green = 0;
     public          $blue = 0;
 
-    static function         doc()
+    static public function  doc()
     {
-        readfile('./Color.doc.txt');
-        # NOTE : readfile ou print(file_get_content) ??
-        print(PHP_EOL);
+        # NOTE : readfile ou print(file_get_content) ?? ou return...
+        # readfile('Color.doc.txt');
+        # print(file_get_contents("Color.doc.txt") . PHP_EOL );
+        return ( file_get_contents("Color.doc.txt") . PHP_EOL );
     }
 
     static private function limit_color( $color )
