@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Veuillez souffler dans le ballon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+            width: auto;
+        }
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="balloon" onclick="gonfle()" onmouseout="degonfle()" ></div>
+    </div>
+    <script type="text/javascript">
+        var b = document.getElementById('balloon');
+        b.style.background = "red";
+
+        function gonfle() {
+            //      Lors d’un clic sur le ballon, sa taille augmentera de 10px
+            //      tout en gardant sa forme arrondie.
+            //      À chaque clic, sa couleur passera dans cet ordre du rouge, au vert, au bleu
+            //      puis on reprend depuis le rouge
+            var size = b.offsetHeight + 10;
+            if (size < 420) {
+                b.style.height = size + "px";
+                b.style.width = size + "px";
+            }
+            else {
+                b.style.height = "200px";
+                b.style.width = "200px";
+            }
+            if (b.style.background == "red")
+                b.style.background = "green";
+            else if (b.style.background == "green")
+                b.style.background = "blue";
+            else if (b.style.background == "blue")
+                b.style.background = "red";
+        }
+
+        function degonfle() {
+            // Petit détail supplémentaire, lorsque le curseur de la souris est dans le ballon
+            // puis le quitte, la taille du ballon diminue de 5px
+            // (la taille du ballon ne peut pas descendre en dessous de 200px)
+            // et sa couleur change dans l’ordre inverse que précédemment cité.
+            var size = b.offsetHeight - 5;
+            if (size > 200) {
+                b.style.height = size + "px";
+                b.style.width = size + "px";
+            }
+            else {
+                b.style.height = "200px";
+                b.style.width = "200px";
+            }
+            if (b.style.background == "blue")
+                b.style.background = "green";
+            else if (b.style.background == "green")
+                b.style.background = "red";
+            else if (b.style.background == "red")
+                b.style.background = "blue";
+        }
+    </script>
+</body>
+</html>
