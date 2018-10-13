@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Balloon with jquery lib</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        function msg(str) {
+            console.log(str);
+        }
+        $(document).ready(function () {
+            $("#ball").on({
+                click: function () {
+                    var ball = $("#ball");
+                    var c = ball.css("background-color");
+                    var w = ball.width();
+                    msg("click event detected: " + "width=height=" + w + " color=" + c);
+                    if (w < 420) {
+                        w += 10;
+                        msg("     blowing up by: " + 10);
+                    } else {
+                        w = 200;
+                    }
+                    if (c === 'rgb(255, 0, 0)') {
+                        c = 'rgb(0, 128, 0)';
+                        msg("     changing color from red to green");
+                    } else if (c === 'rgb(0, 128, 0)') {
+                        c = 'rgb(0, 0, 255)';
+                        msg("     changing color from green to blue");
+                    } else if (c === 'rgb(0, 0, 255)') {
+                        c = 'rgb(255, 0, 0)';
+                        msg("     changing color from blue to red");
+                    }
+                    ball.width(w).height(w).css("background-color", c);
+                },
+                mouseout: function () {
+                    var ball = $("#ball");
+                    var c = ball.css("background-color");
+                    var w = ball.width();
+                    msg("mouseleave event detected: " + "width=height=" + w + " color=" + c);
+                    if (w > 200) {
+                        w -= 5;
+                        msg("     going down by: " + 5);
+                    } else {
+                        w = 200;
+                    }
+                    if (c === 'rgb(255, 0, 0)') {
+                        c = 'rgb(0, 0, 255)';
+                        msg("     changing color from red to blue");
+                    } else if (c === 'rgb(0, 128, 0)') {
+                        c = 'rgb(255, 0, 0)';
+                        msg("     changing color from green to red");
+                    } else if (c === 'rgb(0, 0, 255)') {
+                        c = 'rgb(0, 128, 0)';
+                        msg("     changing color from blue to green");
+                    }
+                    ball.width(w).height(w).css("background-color", c);
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+    /*
+		#container {
+			width: 420px;
+			height: 420px;
+			position: relative;
+			background: black;
+			margin: auto;
+		}
+	*/
+</style>
+
+<body>
+    <div id="container">
+        <div id="ball" style="background-color: red; width: 200px; height: 200px; border-radius: 50%;" </div> </div> </body>
+            </html>
