@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToDo List</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+
+        }
+        .button {
+            background-color: white;
+            border: none;
+            color: black;
+            border: 2px solid green;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: green; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="submit"  class="button" value="New" onclick="addItemOnClick()">
+    <div id="ft_list"></div>
+    <script src="todo.js"></script>
+</body>
+</html>
