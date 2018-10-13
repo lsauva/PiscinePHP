@@ -6,6 +6,11 @@
     <title>ToDo List</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+</head>
+<body>
+    <input type="submit"  class="button" value="New" onclick="addItemOnClick()">
+    <div id="ft_list"></div>
+    <script src="todo.js"></script>
     <style>
         body {
             display: flex;
@@ -14,6 +19,7 @@
             flex-direction: column;
 
         }
+
         .button {
             background-color: white;
             border: none;
@@ -30,14 +36,9 @@
         }
 
         .button:hover {
-            background-color: green; 
+            background-color: green;
             color: white;
         }
     </style>
-</head>
-<body>
-    <input type="submit"  class="button" value="New" onclick="addItemOnClick()">
-    <div id="ft_list"></div>
-    <script src="todo.js"></script>
 </body>
 </html>
