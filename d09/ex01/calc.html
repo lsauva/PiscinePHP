@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculatrice 9000</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <div id="container">
+        <div id="title">
+            <h1>Calculatrice 9000</h1>
+        </div>
+        <div id="calc">
+            <input type="text" id="mb_left" autofocus><br>
+            <select name="operateur" id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select><br>
+            <input type="text" id="mb_right"><br>
+            <input type="submit" value="Try me!" onclick="myFunction()">
+        </div>
+    </div>
+    <script>
+        function msg(str) {
+            console.log(str);
+            alert(str);
+        }
+
+        function isNormalInt(str) {
+            return /^(\+|\-)?(0|[1-9]\d*)$/.test(str);
+        }
+
+        function isOpValid(n) {
+            return ( isNormalInt(n) && (n >= 0) );
+        }
+
+        function add(x, y) {
+            return (x + y);
+        }
+
+        function sub(x, y) {
+            return (x - y);
+        }
+
+        function mult(x, y) {
+            return (x * y);
+        }
+
+
+        function divide(x, y) {
+            return (y != 0) ? (x / y) : msg("It's over 9000!");
+        }
+
+        function modulo(x, y) {
+            return (y != 0) ? (x % y) : msg("It's over 9000");
+        }
+
+        function useMe() {
+            setInterval(function() { alert( "Please, use me..."); }, 30000 );
+        }
+
+        function myFunction() {
+            var x = document.getElementById("mb_left").value;
+            var op = document.getElementById("op").value;
+            var y = document.getElementById("mb_right").value;
+
+            if ( !isOpValid(x) || !isOpValid(y) ) {
+                msg( 'Error :(' );
+            }
+            else {
+                x = parseInt(x, 10);
+                y = parseInt(y, 10);
+                switch (op) {
+                    case "+":
+                        msg(add(x, y));
+                        break;
+                    case "-":
+                        msg(sub(x, y));
+                        break;
+                    case "*":
+                        msg(mult(x, y));
+                        break;
+                    case "/":
+                        msg(divide(x, y));
+                        break;
+                    case "%":
+                        msg(modulo(x, y));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        useMe();
+    </script>
+    <style>
+        #container {
+            background: url("https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5") center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 800px;
+            width: auto;
+        }
+
+        #calc {
+            padding: 20px;
+            border: double 5px grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            letter-spacing: 2px;
+            -webkit-animation: mymove 5s infinite;
+            /* Safari 4.0 - 8.0 */
+            animation: mymove 5s infinite;
+        }
+
+        @-webkit-keyframes mymove {
+            50% {
+                letter-spacing: 50px;
+            }
+        }
+    </style>
+</body>
+</html>
