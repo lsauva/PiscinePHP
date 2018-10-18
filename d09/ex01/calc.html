@@ -54,11 +54,11 @@
 
 
         function divide(x, y) {
-            return (y != 0) ? (x / y) : msg("It's over 9000!");
+            return (y != 0) ? (x / y) : "It's over 9000!";
         }
 
         function modulo(x, y) {
-            return (y != 0) ? (x % y) : msg("It's over 9000");
+            return (y != 0) ? (x % y) : "It's over 9000";
         }
 
         function useMe() {
@@ -123,6 +123,12 @@
             -webkit-animation: mymove 5s infinite;
             /* Safari 4.0 - 8.0 */
             animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            50% {
+                letter-spacing: 50px;
+            }
         }
 
         @-webkit-keyframes mymove {
